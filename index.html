@@ -5,11 +5,58 @@
 	<meta name="description" content="" />
 	<link rel="icon" type="image/png" href="img/favicon-32x32.png" sizes="32x32" />
 	<link rel="icon" type="image/png" href="img/favicon-16x16.png" sizes="16x16" />
-	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Fira+Sans" rel="stylesheet" />
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
 	<title>Form - Training Task</title>
 </head>
 <body>
-
+	<header>
+		<h1>Sign up for Meh.</h1>
+		<h3>Everything you need to build a pretty online portfolio.</h3>
+	</header>
+	<main>
+		<form>
+			<div id="form-header">
+				<h1>Sign up for Meh.</h1>
+				<h3>Everything you need to build a pretty online portfolio.</h3>
+				<div id="free-tag">
+					<span>100%</span>
+					<h2>FREE</h2>
+					<span>for real</span>
+				</div>
+			</div>
+			<fieldset id="portfolio">
+				<legend>First, name your portfolio</legend>
+				<div class="input-section">
+					<label for="portfolio-title">Portfolio Title</label>
+					<input type="text" name="portfolio-title" id="portfolio-title" required="required" />
+				</div>
+				<div class="input-section">
+					<label for="portfolio-address">Portfolio Address</label>
+					<input type="text" name="portfolio-address" id="portfolio-address" required="required" />
+				</div>
+			</fieldset>
+			<fieldset id="account">
+				<legend>Second, enter your account details</legend>
+				<div class="input-section">
+					<label for="name">Name</label>
+					<input type="text" name="name" id="name" required="required" />
+				</div>
+				<div class="input-section">
+					<label for="email">Email</label>
+					<input type="email" name="email" id="email" required="required" /> <br />
+					<span id="email-note">NOTE: We will never share your email, promise...</span>
+				</div>
+				<div class="input-section">
+					<label for="password">Passwork</label>
+					<input type="text" name="password" id="passwork" required="required" />
+				</div>
+			</fieldset>
+			<input type="checkbox" name="priv-terms" id="priv-terms">
+			<label for="priv-terms">I agree to the <a href="">Terms of Use</a>, <a href="">Privacy Policy</a> and <a href="">Refund Policy</a>.</label> <br />
+			<button type="submit">Create your portfolio</button>
+		</form>
+	</main>
 	<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
 	<script
   src="https://code.jquery.com/jquery-3.3.1.min.js"

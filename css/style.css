@@ -218,3 +218,24 @@ form button {
 form button:active {
 	background-color: #E91E63DD;
 }
+
+/* Mobile Query */
+
+@media screen and (max-width: 1024px) {
+	main {
+		height: 92vh;
+		width: 90%;
+		margin: 0;
+	}
+
+	#form-header {
+		 height: 12vh;
+		 font-size: 1.5em;
+	}
+
+	#free-tag {
+		font-size: 1.1em;
+		height: 20vw;
+		width: 20vw;
+	}
+}

@@ -122,6 +122,7 @@ legend::before {
 }
 
 .input-section {
+	position: relative;
 	display: flex;
 	flex-direction: column;
 }
@@ -149,6 +150,20 @@ legend::before {
 
 .input-section input:focus {
 	outline-color: #E91E63;
+}
+
+.input-section input:disabled {
+	background-color: #FFFFFF88;
+}
+
+.input-section input.required {
+	background-color: #ff000022;
+	outline-color: #FF0000;
+}
+
+.input-section input.required::placeholder {
+	color: #FF0000;
+	font-weight: 400;
 }
 
 span#email-note {

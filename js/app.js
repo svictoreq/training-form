@@ -4,11 +4,21 @@ $(document).ready(function() {
 	const inputs = [...$('input')];
 
 	const disableAccInputs = function disableAccInputs(value) {
-		for (let i = accountInputs.length - 1; i >= 0; i--) {
+		for (let i = 0; i < accountInputs.length; i++) {
 			if (typeof value !== "boolean") {
 				throw 'Invalid type of parameter, must be a boolean';
 			}
 			$(accountInputs[i]).prop('disabled', value);
+		}
+	}
+
+	const checkForSubmit = function checkForSubmit() {
+		if (inputs.every(input => input.value) && $('#priv-terms')[0].checked) {
+			$('form').off('submit');
+		} else {
+			$('form').on('submit', function(e) {
+				e.preventDefault();
+			});
 		}
 	}
 
@@ -40,6 +50,7 @@ $(document).ready(function() {
 				disableAccInputs(false);
 			} else {
 				disableAccInputs(true);
+				accountInputs.forEach(input => input.value = '')
 			}
 		});
 	});
@@ -50,9 +61,11 @@ $(document).ready(function() {
 
 	$('#priv-terms').on('click', function() {
 		if (!$('#priv-terms')[0].checked) {
-		$('form button').prop('disabled', true);
-	} else {
-		$('form button').prop('disabled', false);
-	}
+			$('form button').prop('disabled', true);
+		} else {
+			$('form button').prop('disabled', false);
+		}
 	});
+
+	$('form').on('submit', checkForSubmit);
 });

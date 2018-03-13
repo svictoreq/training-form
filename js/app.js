@@ -42,5 +42,17 @@ $(document).ready(function() {
 				disableAccInputs(true);
 			}
 		});
-	})
+	});
+
+	if (!$('#priv-terms')[0].checked) {
+		$('form button').prop('disabled', true);
+	}
+
+	$('#priv-terms').on('click', function() {
+		if (!$('#priv-terms')[0].checked) {
+		$('form button').prop('disabled', true);
+	} else {
+		$('form button').prop('disabled', false);
+	}
+	});
 });

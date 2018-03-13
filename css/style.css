@@ -242,6 +242,11 @@ form button:active {
 	background-color: #E91E63DD;
 }
 
+form button:disabled {
+	background-color: #E91E6388;
+	cursor: not-allowed;
+}
+
 /* Mobile Query */
 
 @media screen and (max-width: 1024px) {

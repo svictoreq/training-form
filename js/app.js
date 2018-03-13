@@ -55,10 +55,8 @@ $(document).ready(function() {
 		});
 	});
 
-	if (!$('#priv-terms')[0].checked) {
-		$('form button').prop('disabled', true);
-	}
-
+	// Submit button "disabled" toggle
+	$('form button').prop('disabled', true);
 	$('#priv-terms').on('click', function() {
 		if (!$('#priv-terms')[0].checked) {
 			$('form button').prop('disabled', true);

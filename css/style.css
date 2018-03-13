@@ -15,12 +15,14 @@ button {
 
 main {
 	display: flex;
+	margin: 50px 0;
 	flex-direction: column;
 	justify-content: center;
 	width: 50%;
 	min-height: 80vh;
 	background-color: #FAFAFA;
 	border-radius: 10px;
+	position: relative;
 }
 
 form {
@@ -32,6 +34,7 @@ form {
 	flex-direction: column;
 	justify-content: space-around;
 	padding: 0 3%;
+	padding-bottom: 3%;
 }
 
 /* Form Header */
@@ -46,7 +49,7 @@ form {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	padding: 3%;
+	padding: 3% calc(3% + 0.75em);
 	border-radius: 10px 10px 0 0;
 }
 
@@ -86,4 +89,70 @@ form {
 	font-weight: 300;
 	font-style: italic;
 	opacity: 0.8;
+}
+
+/* Form Elements */
+
+fieldset, legend {
+	margin: 2% 0;
+	border-radius: 5px;
+	border: 2px solid #cfd8dc;
+	background-color: #ECEFF1;
+}
+
+legend {
+	padding: 0.8%;
+	font-size: 1.2em;
+	font-weight: 500;
+	color: #E91E63;
+}
+
+legend::before {
+	position: absolute;
+	left: -0.6em;
+	width: 1.2em;
+	height: 1.2em;
+	background-color: #E91E63;
+	color: #FFFFFF;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 50px;
+	border: 2px solid #CFD8DC;
+}
+
+.input-section {
+	display: flex;
+	flex-direction: column;
+}
+.input-section:first-of-type label {
+	margin-top: 3px;
+}
+
+.input-section label {
+	margin-top: 0.9em;
+	margin-bottom: 3px;
+}
+
+.input-section input {
+	border: none;
+	border-radius: 3px;
+	height: 2em;
+	margin: 3px 0;
+	text-indent: 0.8em;
+	font-size: 1.1em;
+	font-family: 'Fira Sans', sans-serif;
+	font-weight: 300;
+	color: #546E7A;
+	box-shadow: 0 0 10px #CFD8DC	;
+}
+
+.input-section input:focus {
+	outline-color: #E91E63;
+}
+
+span#email-note {
+	font-size: 0.9em;
+	font-weight: 300;
+	color: #546E7A
 }

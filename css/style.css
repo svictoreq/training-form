@@ -222,10 +222,13 @@ form button:active {
 /* Mobile Query */
 
 @media screen and (max-width: 1024px) {
+	form {
+		justify-content: flex-start;
+	}
+
 	main {
-		height: 92vh;
 		width: 90%;
-		margin: 0;
+		margin: 7% 0;
 	}
 
 	#form-header {
@@ -237,5 +240,31 @@ form button:active {
 		font-size: 1.1em;
 		height: 20vw;
 		width: 20vw;
+	}
+
+	fieldset {
+		font-size: 2em;
+	}
+
+	fieldset .input-section input {
+		height: 2.5em;
+	}
+
+	/* Checkbox Section */
+	div#checkbox-container {
+		font-size: 1.7em;
+	}
+
+	div#checkbox-container input#priv-terms {
+		height: 1.5em;
+		width: 1.5em;
+		font-size: 1.4em;
+		margin-right: 8px;
+	}
+
+	/* Submit Button */
+	form button {
+		height: 5vh;
+		font-size: 2em;
 	}
 }

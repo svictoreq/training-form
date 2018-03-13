@@ -156,3 +156,47 @@ span#email-note {
 	font-weight: 300;
 	color: #546E7A
 }
+
+/* Checkbox and label */
+
+div#checkbox-container {
+	display: flex;
+	align-items: center;
+	margin: 1em 0;
+	margin-top: calc(1em - 2%);
+}
+
+input#priv-terms {
+	-webkit-appearance: none;
+	border: none;
+	border-radius: 2px;
+	background-color: #ECEFF1 ;
+	border: 2px solid #CFD8DC;
+	outline: none;
+	cursor: pointer;
+	height: 20px;
+	width: 20px;
+}
+
+input#priv-terms:checked {
+	background-color: #E91E63;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-color: #E91E63;
+}
+
+input#priv-terms:checked::after {
+	box-sizing: border-box;
+	font-size: 1.3em;
+	color: #ffffff;
+	font-family: 'Material Icons';
+	font-weight: bold;
+	content: 'done';
+	-webkit-font-feature-settings: 'liga';
+}
+
+div#checkbox-container label a {
+	color: #03A9F4;
+	text-decoration: none;
+}

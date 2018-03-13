@@ -6,7 +6,7 @@ body {
 	justify-content: center;
 	align-items: center;
 	min-height: 100vh;
-	background-color: #9E9E9E;
+	background-color: #90CAF9;
 }
 
 button {
@@ -199,4 +199,22 @@ input#priv-terms:checked::after {
 div#checkbox-container label a {
 	color: #03A9F4;
 	text-decoration: none;
+}
+
+/* Submit Button */
+
+form button {
+	border: none;
+	border-radius: 5px;
+	font-family: 'Fira Sans', sans-serif;
+	font-size: 1.3em;
+	color: #FFFFFF;
+	padding: 1%;
+	cursor: pointer;
+	background-color: #E91E63;
+}
+
+
+form button:active {
+	background-color: #E91E63DD;
 }

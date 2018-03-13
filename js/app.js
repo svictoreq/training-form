@@ -24,6 +24,8 @@ $(document).ready(function() {
 			}
 		});
 
+		// This is for UX improvement
+		// when filling a required input
 		$(input).on('keypress', function() {
 			$(this).removeClass('required');
 			$(this).attr('placeholder', '');

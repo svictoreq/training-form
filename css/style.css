@@ -121,6 +121,14 @@ legend::before {
 	border: 2px solid #CFD8DC;
 }
 
+#portfolio legend::before {
+	content: '1';
+}
+
+#account legend::before {
+	content: '2';
+}
+
 .input-section {
 	position: relative;
 	display: flex;
